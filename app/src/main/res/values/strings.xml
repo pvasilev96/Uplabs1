@@ -5,6 +5,7 @@
     <string name="web">Web</string>
     <string name="ios">iOS</string>
     <string name="motion">Motion</string>
+    <string name="search">Search</string>
     <string-array name="subcategories">
         <item>App</item>
         <item>Icon</item>
