@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">Uplabs</string>
-    <string-array name="categories">
-        <item>Android</item>
-        <item>Web</item>
-        <item>iOS</item>
-        <item>Branding</item>
-        <item>3D</item>
-        <item>Illustration</item>
-        <item>Motion</item>
-    </string-array>
+    <string name="recent">Recent search</string>
+    <string name="android">Android</string>
+    <string name="web">Web</string>
+    <string name="ios">iOS</string>
+    <string name="motion">Motion</string>
     <string-array name="subcategories">
         <item>App</item>
         <item>Icon</item>

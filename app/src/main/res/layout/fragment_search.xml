@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_categories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_android"
+                style="@style/CategoryButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#3fa044"
+                android:src="@drawable/ic_android_white_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/label_android"
+                app:layout_constraintEnd_toStartOf="@+id/btn_web"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <TextView
+                android:id="@+id/label_android"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_android"
+                app:layout_constraintStart_toStartOf="@+id/btn_android"
+                app:layout_constraintTop_toBottomOf="@+id/btn_android" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_web"
+                style="@style/CategoryButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#ab1551"
+                android:src="@drawable/ic_desktop_white_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/label_web"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_ios"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_android"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_web"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/web"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_web"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn_web"
+                app:layout_constraintTop_toBottomOf="@+id/btn_web" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_ios"
+                style="@style/CategoryButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#533ab5"
+                android:src="@drawable/ic_phone_iphone_white_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/label_ios"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_motion"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_web"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_ios"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ios"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_ios"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn_ios"
+                app:layout_constraintTop_toBottomOf="@+id/btn_ios" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_motion"
+                style="@style/CategoryButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#eb3573"
+                android:src="@drawable/ic_graphic_eq_white_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/label_motion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_ios"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_motion"
+                style="@style/CategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/motion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_motion"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/btn_motion"
+                app:layout_constraintTop_toBottomOf="@+id/btn_motion" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_subcategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_category">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/layout_subcategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start">
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon" />
+
+            <TextView
+                style="@style/SubcategoryButtonActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animation" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Template" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mockup" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Illustration" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experiment" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI kit" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Software" />
+
+            <TextView
+                style="@style/SubcategoryButtonInactive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marketing" />
+        </com.google.android.flexbox.FlexboxLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_recent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_subcategory">
+
+        <LinearLayout
+            android:id="@+id/layout_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/label_recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:alpha="0.87"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/recent"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_search" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
