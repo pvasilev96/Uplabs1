@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Uplabs</string>
+    <string-array name="categories">
+        <item>Android</item>
+        <item>Web</item>
+        <item>iOS</item>
+        <item>Branding</item>
+        <item>3D</item>
+        <item>Illustration</item>
+        <item>Motion</item>
+    </string-array>
+    <string-array name="subcategories">
+        <item>App</item>
+        <item>Icon</item>
+        <item>User interface</item>
+        <item>Website</item>
+        <item>Animation</item>
+        <item>Landing page</item>
+        <item>Marketing</item>
+        <item>Template</item>
+        <item>UI kit</item>
+        <item>Mockup</item>
+        <item>Experiment</item>
+        <item>Icons</item>
+        <item>Illustration</item>
+        <item>Library</item>
+        <item>Software</item>
+    </string-array>
 </resources>
