@@ -51,6 +51,10 @@ dependencies {
     // DI
     implementation 'com.github.stephanenicolas.toothpick:toothpick-runtime:1.1.1'
     kapt 'com.github.stephanenicolas.toothpick:toothpick-compiler:1.1.1'
+    // Mvp
+    implementation 'com.arello-mobile:moxy:1.5.3'
+    implementation 'com.arello-mobile:moxy-app-compat:1.5.3'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.3'
     // Other
     implementation 'com.hannesdorfmann:adapterdelegates3:3.0.1'
     implementation 'joda-time:joda-time:2.9.9'

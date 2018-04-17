@@ -2,6 +2,7 @@ package com.pvasiliev.uplabs
 
 import android.app.Application
 import com.pvasiliev.uplabs.di.AppModule
+import retrofit2.Retrofit
 import toothpick.Toothpick
 
 class App : Application() {
