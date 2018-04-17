@@ -1,4 +1,4 @@
-package com.pvasiliev.uplabs
+package com.pvasiliev.uplabs.ui.adapter
 
 import android.graphics.Canvas
 import android.graphics.Color
