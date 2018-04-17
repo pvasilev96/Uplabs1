@@ -6,6 +6,9 @@
     <string name="ios">iOS</string>
     <string name="motion">Motion</string>
     <string name="search">Search</string>
+    <string name="explore">Explore</string>
+    <string name="posts">Posts</string>
+    <string name="profile">Profile</string>
     <string-array name="subcategories">
         <item>App</item>
         <item>Icon</item>

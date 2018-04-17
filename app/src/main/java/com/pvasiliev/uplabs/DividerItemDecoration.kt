@@ -12,13 +12,15 @@ class DividerItemDecoration(private val left: Int, private val right: Int) : Rec
     }
 
     override fun onDrawOver(canvas: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        val paddingLeft = parent.context.resources.getDimension(left)
+        val paddingRight = parent.context.resources.getDimension(right)
         (0 until parent.childCount)
                 .map { parent.getChildAt(it) }
                 .forEach {
                     canvas.drawLine(
-                            left.toFloat(),
+                            paddingLeft,
                             it.top.toFloat() + 2.0F,
-                            it.width.toFloat() - right,
+                            it.width.toFloat() - paddingRight,
                             it.top.toFloat() + 2.0F, paint
                     )
                 }

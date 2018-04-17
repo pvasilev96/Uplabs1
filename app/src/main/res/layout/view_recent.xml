@@ -38,6 +38,6 @@
             android:layout_height="wrap_content"
             android:overScrollMode="never"
             tools:itemCount="3"
-            tools:listitem="@layout/item_search" />
+            tools:listitem="@layout/item_history" />
     </LinearLayout>
 </android.support.v7.widget.CardView>
