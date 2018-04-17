@@ -1,11 +1,42 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CategoryButton">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/bg_circle</item>
+    </style>
+
+    <style name="CategoryText">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:alpha">0.87</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#FF000000</item>
+    </style>
+
+    <style name="SubcategoryButtonActive">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:alpha">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SubcategoryButtonInactive">
+        <item name="android:background">#F5F5F5</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:alpha">0.54</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>
