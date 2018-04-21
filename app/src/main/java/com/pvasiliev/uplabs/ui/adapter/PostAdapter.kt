@@ -4,11 +4,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.pvasiliev.uplabs.R
 import com.pvasiliev.uplabs.data.models.Post
 import kotlinx.android.synthetic.main.item_date.view.*
 import kotlinx.android.synthetic.main.item_post.view.*
 import org.joda.time.LocalDate
+import java.util.*
 
 class PostAdapter(private val postsByDate: Map<LocalDate, List<Post>>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -50,14 +52,22 @@ class PostAdapter(private val postsByDate: Map<LocalDate, List<Post>>) : Recycle
 
     class DateVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindDate(date: LocalDate) {
-            itemView.date_label.text = date.toString()
+            with(itemView) {
+                day_of_week_label.text = date.dayOfWeek().getAsText(Locale.ENGLISH)
+                date_label.text = date.toString("MMMM d", Locale.ENGLISH)
+            }
         }
     }
 
     class PostVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindPost(post: Post) {
-            itemView.post_title.text = post.title
-            itemView.post_author.text = post.creator.fullName
+            with(itemView) {
+                Glide.with(iv_teaser).load(post.teaser).into(iv_teaser)
+                Glide.with(iv_avatar).load(post.creator.avatar).into(iv_avatar)
+                tv_title.text = post.title
+                tv_description.text = post.creator.fullName
+                tv_likes.text = post.upvotes.toString()
+            }
         }
     }
 }

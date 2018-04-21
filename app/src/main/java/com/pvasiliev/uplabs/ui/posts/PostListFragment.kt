@@ -11,6 +11,7 @@ import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.pvasiliev.uplabs.R
 import com.pvasiliev.uplabs.data.models.Post
 import com.pvasiliev.uplabs.data.tabIdToFragmentKey
+import com.pvasiliev.uplabs.ui.adapter.MarginItemDecoration
 import com.pvasiliev.uplabs.ui.adapter.PostAdapter
 import kotlinx.android.synthetic.main.fragment_post_list.*
 import org.joda.time.LocalDate
@@ -30,8 +31,11 @@ class PostListFragment : MvpAppCompatFragment(), PostListView {
             inflater.inflate(R.layout.fragment_post_list, container, false)
 
     override fun showPosts(postsByDate: Map<LocalDate, List<Post>>) {
-        recycler_view.adapter = PostAdapter(postsByDate)
-        recycler_view.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recycler_view.apply {
+            adapter = PostAdapter(postsByDate)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            addItemDecoration(MarginItemDecoration(R.dimen.post_margin_horizontal, R.dimen.post_margin_vertical, R.dimen.post_margin_horizontal))
+        }
     }
 
     override fun showError(error: Throwable) {
