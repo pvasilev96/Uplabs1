@@ -1,4 +1,4 @@
-package com.pvasiliev.uplabs.ui
+package com.pvasiliev.uplabs.ui.profile
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

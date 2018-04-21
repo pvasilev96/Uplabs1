@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="history_padding_left">62dp</dimen>
+    <dimen name="history_padding_left">46dp</dimen>
     <dimen name="history_padding_right">0dp</dimen>
+    <dimen name="post_margin_horizontal">16dp</dimen>
+    <dimen name="post_margin_vertical">24dp</dimen>
 </resources>

@@ -1,9 +1,10 @@
-package com.pvasiliev.uplabs
+package com.pvasiliev.uplabs.ui.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.pvasiliev.uplabs.R
 import kotlinx.android.synthetic.main.item_history.view.*
 
 class HistoryAdapter(private val items: List<String>) : RecyclerView.Adapter<HistoryAdapter.HistoryVH>() {

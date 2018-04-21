@@ -1,4 +1,4 @@
-package com.pvasiliev.uplabs.ui
+package com.pvasiliev.uplabs.ui.main
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pvasiliev.uplabs.R
-import com.pvasiliev.uplabs.tabIdToFragmentKey
+import com.pvasiliev.uplabs.data.tabIdToFragmentKey
+import com.pvasiliev.uplabs.ui.explore.ExploreFragment
+import com.pvasiliev.uplabs.ui.Screens
+import com.pvasiliev.uplabs.ui.posts.PostListFragment
+import com.pvasiliev.uplabs.ui.profile.ProfileFragment
 import ru.terrakok.cicerone.Cicerone
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
@@ -42,7 +46,7 @@ class TabFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         tabKey = arguments.getString(ARGUMENT_TAB_KEY)
-        val scope = Toothpick.openScope(tabKey)
+        val scope = Toothpick.openScopes(context.applicationContext, tabKey)
         scope.installModules(object : Module() {
             init {
                 val cicerone = Cicerone.create()

@@ -1,4 +1,4 @@
-package com.pvasiliev.uplabs.ui
+package com.pvasiliev.uplabs.ui.main
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.jakewharton.rxbinding2.support.design.widget.RxBottomNavigationView
 import com.pvasiliev.uplabs.R
-import com.pvasiliev.uplabs.tabIdToFragmentKey
+import com.pvasiliev.uplabs.data.tabIdToFragmentKey
+import com.pvasiliev.uplabs.ui.BackButtonListener
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

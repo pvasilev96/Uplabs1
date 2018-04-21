@@ -1,7 +1,7 @@
 package com.pvasiliev.uplabs.data.models
 
 import com.squareup.moshi.Json
-import java.util.*
+import org.joda.time.LocalDate
 
 data class Post(
         val id: Long,
@@ -12,7 +12,7 @@ data class Post(
         @Json(name = "category_friendly_name") val category: String,
         @Json(name = "subcategory_friendly_name_plural") val subcategory: String,
         @Json(name = "label_friendly_name") val label: String,
-        @Json(name = "showcased_at") val date: Date,
+        @Json(name = "showcased_at") val date: LocalDate,
         @Json(name = "serialized_submitter") val creator: User,
         @Json(name = "serialized_upvoters") val upvoters: List<User>,
         @Json(name = "serialized_tools") val tools: List<Tool>,
