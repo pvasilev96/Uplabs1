@@ -85,7 +85,7 @@ class TabFragment : Fragment() {
 
         override fun createFragment(screenKey: String, data: Any?): Fragment? =
                 when (screenKey) {
-                    Screens.POST_LIST_SCREEN -> PostListFragment()
+                    Screens.POST_LIST_SCREEN -> PostListFragment.newInstance(data as String?)
                     Screens.EXPLORE_SCREEN -> ExploreFragment()
                     Screens.PROFILE_SCREEN -> ProfileFragment()
                     else -> null

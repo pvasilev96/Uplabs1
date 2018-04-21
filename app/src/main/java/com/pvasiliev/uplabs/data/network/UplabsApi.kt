@@ -13,6 +13,9 @@ interface UplabsApi {
     @GET("/all.json")
     fun getLatest(@Query("days_ago") ago: Int): Single<List<Post>>
 
+    @GET("/posts/c/all/resources/{category}.json")
+    fun getByCategory(@Path("category") category: String, @Query("page") page: Int): Single<List<Post>>
+
     @PUT("/posts/{postId}/upvote")
     fun upvote(@Path("postId") postId: Int): Single<Upvote>
 
