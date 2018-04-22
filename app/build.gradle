@@ -32,6 +32,8 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:support-emoji:26.1.0'
+    implementation 'com.android.support:support-emoji-bundled:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     // Custom Views & ViewGroups
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
@@ -43,6 +45,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation 'org.jsoup:jsoup:1.11.2'
     // Images
