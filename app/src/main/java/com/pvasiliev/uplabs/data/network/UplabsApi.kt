@@ -16,6 +16,9 @@ interface UplabsApi {
     @GET("/posts/c/all/resources/{category}.json")
     fun getByCategory(@Path("category") category: String, @Query("page") page: Int): Single<List<Post>>
 
+    @GET("/{nickname}")
+    fun getBadges(@Path("nickname") nickname: String): Single<String>
+
     @PUT("/posts/{postId}/upvote")
     fun upvote(@Path("postId") postId: Int): Single<Upvote>
 
