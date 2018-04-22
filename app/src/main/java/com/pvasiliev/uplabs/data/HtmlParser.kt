@@ -10,7 +10,7 @@ fun parseBadges(response: String): List<Badge> {
         val (_, outerColor) = it.attr("style").removeSuffix(";").split(":")
         val element = it.selectFirst(".user-badge-inner")
         val (_, innerColor) = element.attr("style").removeSuffix(";").split(":")
-        val emoji = element.selectFirst("span").text()
-        Badge(emoji, innerColor, outerColor)
+        val emoji = element.selectFirst("span").text().substring(0, 2)
+        Badge(emoji, innerColor.trim(), outerColor.trim())
     }
 }
